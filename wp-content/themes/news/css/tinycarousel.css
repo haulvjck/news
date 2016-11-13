@@ -1,0 +1,110 @@
+/* Tiny Carousel */
+#slider1 {
+    height: 1%;
+    margin: 30px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider1 .viewport {
+    height: 255px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider1 .buttons {
+    background: rgba(192, 19, 19, 0.7);
+    display: block;
+    position: absolute;
+    top: 42%;
+    left: 1px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 22px;
+    z-index: 2222222222222222;
+}
+
+#slider1 .next {
+    right: 6px;
+    left: auto;
+    top: 42%;
+}
+
+#slider1 .buttons:hover {
+    color: #C01313;
+    background: #fff;
+}
+
+#slider1 .disable {
+    visibility: hidden;
+}
+
+#slider1 .overview {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    left: 0;
+    top: 0;
+}
+
+#slider1 .overview li {
+    float: left;
+    margin: 0 26px 0 0;
+    padding: 1px;
+    height: 250px;
+    width: 345px;
+ 
+    position: relative;
+}
+ ul.overview li img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+ul.overview li h2 {
+    position: absolute;
+    bottom: 23px;
+    font-family: 'anhsang';
+    margin-left: 3px;
+    width: 70%;
+}
+ul.overview li h2 a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(237, 64, 30, 0.82);
+    padding: 5px 5px 5px 5px;
+    line-height: 30px;
+}
+.numbercmt {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    height: 70px;
+    width: 70px;
+    background: #ED401E;
+    border-radius: 50%;
+}
+.numbercmt h3 {
+    height: 50px;
+    width: 50px;
+    background: #C01313;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.numbercmt a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'anhsang';
+    font-size: 24px;
+    position: absolute;
+    top: 19px;
+    left: 29px;
+}
