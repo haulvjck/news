@@ -63,28 +63,38 @@
    <body>
 		<header>
 				<div class="top-header">
-				  <div class="container">
-				  <?php wp_nav_menu(  array( 'container_class' => 'menutop', 'theme_location' => 'topdown-menu' ) ); ?>
+				  <div class="container" style="vertical-align: center; height: 20px">
+				  	<!-- <?php wp_nav_menu(  array( 'container_class' => 'menutop', 'theme_location' => 'topdown-menu' ) ); ?> -->
 					<div class="info-user">
 						<ul>
-							<!-- <li><a href="#"><i class="fa fa-users"></i> Theo dõi</a></li>
-							<li><a href="#"><i class="fa fa-sign-in"></i> Đăng nhập</a></li> -->
+							<!-- <li><a href="#"><i class="fa fa-users"></i> Theo dõi</a></li> -->
+							<!-- <li><a href="#"><i class="fa fa-sign-in"></i> Đăng nhập</a></li> -->
+							<li><marquee direction = "left" behavior="scroll">
+						  		Tu Viện Từ Ân * Kính chào mừng Chư Tôn Đức Tăng Ni, qu‎ý Đồng Hương Phật Tử xa gần * Nam Mô A Di Đà Phật. * Nam Mô Bổn Sư Thích Ca Mâu Ni Phật * Welcome to Tu An Monatery
+						  		</marquee>
+						  	</li>
 						</ul>
 					</div>
-				  </div>
+				  	</div>
 				  <div class="clear"></div>
 				</div>
 				<div class="center-header bg">
 					<div class="container bg">
-						<h1 id="logo" class="wow fadeInRight animated"><a href="<?php bloginfo("home"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/banner-top.jpg" title="liên hệ quảng cáo" alt="lên hệ quảng cáo"></a></h1>
-						<div class="banner-top">
-							<a href="<?php bloginfo("home"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/banner-top.jpg" title="liên hệ quảng cáo" alt="lên hệ quảng cáo"></a>
+						<div class="sub-center-header">
+							<div class="icon-center-header-logo">
+								<h1 id="logo" class="wow fadeInRight animated"><a href="<?php bloginfo("home"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" title="liên hệ quảng cáo" alt="lên hệ quảng cáo"></a></h1></div>
+							<div class="icon-center-header-slide">
+								<div class="slideshow">
+									<div><a href="<?php bloginfo("home"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/banner-center_1.png"></a></div>								
+									<div><a href="<?php bloginfo("home"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/banner-center_2.png"></a></div>
+								</div>
+							</div>
+							<div class="clear"></div>
 						</div>
-						<div class="clear"></div>
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div class="bottom-header">
+				<div class="bottom-header" style="width: 1170px;">
 					<div class="container">
 						<div class="menu">
 							<div class="home">
@@ -97,3 +107,47 @@
 					<div class="clear"></div>
 				</div>
 		</header>
+
+<script language="javascript">
+	/***************************************************************************************
+	* Run when page load
+	***************************************************************************************/
+	$(document).ready(function()
+	{
+		initSlideShow();
+		
+	});
+	/***************************************************************************************
+	****************************************************************************************/
+	function initSlideShow()
+	{
+		if($(".slideshow div").length > 1) //Only run slideshow if have the slideshow element and have more than one image.
+		{
+			var transationTime = 5000;//5000 mili seconds i.e 5 second
+			$(".slideshow div:first").addClass('active'); //Make the first image become active i.e on the top of other images
+			setInterval(slideChangeImage, transationTime); //set timer to run the slide show.
+		}
+	}
+	/***************************************************************************************
+	****************************************************************************************/
+	
+	function slideChangeImage()
+	{
+		var active = $(".slideshow div.active"); //Get the current active element.
+		if(active.length == 0)
+		{
+			active = $(".slideshow div:last"); //If do not see the active element is the last image.
+		}
+		
+		var next = active.next().length ? active.next() : $(".slideshow div:first"); //get the next element to do the transition
+		active.addClass('lastactive');
+		next.css({opacity:0.0}) //do the fade in fade out transition
+				.addClass('active')
+				.animate({opacity:1.0}, 1500, function()
+				{
+					active.removeClass("active lastactive");	
+				});
+		 
+	}
+
+</script>

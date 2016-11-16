@@ -6,7 +6,7 @@
 <?php if ( function_exists('yoast_breadcrumb') ) {
 yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 } ?>
-<p class="loi">Trang không tồn tại, bạn có thể quay lại trang chủ, hoặc nghe nhạc </p>
+<p class="loi">Trang không tồn tại, vui lòng kiểm tra lại đường dẫn </p>
 <a href="http://google.com">Back to Home</a>
 <iframe width="100%" height="500" src="http://mp3.zing.vn/embed/album/ZWZBDO0O" frameborder="0" allowfullscreen="true"></iframe>
 					</div>

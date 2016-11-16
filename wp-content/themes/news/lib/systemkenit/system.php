@@ -5,11 +5,11 @@ add_filter('admin_title', 'my_admin_title', 10, 2);
 
 function my_admin_title($admin_title, $title)
 {
-    return $title.' &lsaquo; '.get_bloginfo('name').' &lsaquo; '.'HuyKira.NET';
+    return $title.' &lsaquo; '.get_bloginfo('name').' &lsaquo; '.'JckKumi';
 }
 /** Footer **/
 function remove_footer_admin () {
-    echo 'Phát triển bởi HuyKira.NET';
+    echo 'Develop by Jck Kumi';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 /** **/ 
@@ -108,13 +108,13 @@ add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
     <P><?php echo bloginfo( 'name' ); ?> | <?php echo bloginfo( 'description' ); ?></p>
     <p><strong></strong><?php echo $info;  ?></p>
 	<p><strong>NHÀ PHÁT TRIỂN</strong></p>
-    <p>Hệ thống được phát triển bởi <strong>HuyKira.Net</strong> trên nền <strong> Wordpress <?php echo bloginfo("version") ; ?> </strong>.</p>
-    <p>Mọi thắc mắc, lỗi trong quá trình sử dụng Quý khách hàng có thể liên hệ Kỹ Thuật <strong>HuyKira.Net</strong></p>
-    <p><strong>Võ Quang Huy </strong> 
+    <p>Hệ thống được phát triển bởi <strong>Jck Kumi</strong> trên nền <strong> Wordpress <?php echo bloginfo("version") ; ?> </strong>.</p>
+    <p>Mọi thắc mắc, lỗi trong quá trình sử dụng Quý khách hàng có thể liên hệ Kỹ Thuật <strong>Jck Kumi</strong></p>
+    <p><strong>Mr. Hậu</strong> 
     <p> Web Developer</p> 
-    <p><strong>Phone</strong>: 01658 949 680 <strong>Skype</strong>: huykira92</p> 
-    <p><strong>Email</strong>: huykira@gmail.com <strong>Website</strong>: <a href="http://huykira.net/">www.huykira.net</a></p> 
-    <p>Cảm ơn quý khách đã tin tưởng và sử dụng sản phẩm của HuyKira.Net</p>
+    <p><strong>Skype</strong>: vhaulee</p> 
+    <p><strong>Email</strong>: vhaulee@gmail.com</p> 
+    <p>Cảm ơn quý khách đã tin tưởng và sử dụng sản phẩm</p>
 	<?php }
 
 /** Add Setting **/    

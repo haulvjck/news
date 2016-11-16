@@ -68,8 +68,15 @@ background: url(images/bg.jpg);
 }
 
 .top-header {
-    background: #4b4a48;
-    width: 100%;
+    background: green;
+    width: 1170px;
+    /*width: 100%;*/
+    height: 30px;
+    color: white;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 100px;
+    /*vertical-align: text-center;*/
 }
 .adc {
 	max-width: 100%;
@@ -103,12 +110,61 @@ background: url(images/bg.jpg);
     color: #FF8670;
 }
 .center-header {
-	padding: 25px 0px;
+  background: url("images/center-header-bg.jpg");
+	/*padding: 20px 20px;*/
 	margin: 0 auto;
 	width: 1170px;
+  /*width: 100%;*/
+  height: 200px;
+  max-width: 100%;
+  min-width: 100px;
+}
+.sub-center-header {
+  width: 1170px;
+  float: left;
+  padding-left: 0px;
+  max-width: 100%;
+  min-width: 100px;
+}
+.icon-center-header-logo{
+  width: 20%;
+  float: left;
+  padding-left: 50px;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 100px;
+}
+.icon-center-header-slide{
+  width: 70%;
+  float: right;
+  padding-left: 30px;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 100px;
+}
+.slideshow { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:150px; /*The slide show height*/
+        overflow:hidden;
+}
+.slideshow div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+}
+.slideshow div img {
+        /*width:600px; */
+        /*height:320px;*/
+}
+    .slideshow div.active {
+        z-index:10;
+}
+    .slideshow div.lastactive {
+        z-index:9;
 }
 h1#logo {
-    width: 400px;
+    width: 200px;
     float: left;
 	padding-left: 40px;
 }
@@ -117,7 +173,10 @@ h1#logo {
 }
 .bottom-header {
 	background: #008000;
-  height: 40px;
+  height: 40px auto;
+  width: auto;
+    /*width: 100%;*/
+  margin: 0 auto;
 }
 .menu {
     padding: 0px 35px;
@@ -847,7 +906,7 @@ h2.title span a {
 }
 
 input.search-field {
-    width: 190px;
+    width: 170px;
     height: 30px;
     float: left;
     margin-right: 5px;
@@ -859,7 +918,7 @@ input.search-submit {
     float: left;
     width: 34px;
     height: 30px;
-    background: #FFC14F url(http://huykira.net/wp-content/themes/blogkira/images/icon.png);
+    background: #FFC14F url(images/search_icon.jpg);
     border: 0;
 }
 
@@ -982,13 +1041,13 @@ ul.postfeatured {
 
 h1#logo {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin-bottom: 15px;
 }
 
 .banner-top {
-    text-align: center;
+    text-align: left;
 }
 
 form.search-form {
